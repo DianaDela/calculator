@@ -14,6 +14,23 @@ function App() {
   }
 };
 
+
+const handleButtonClicks = () => {
+  if (screen === '0') {
+    setScreen('8');
+  } else {
+    setScreen(`${screen}8`);
+  }
+};
+
+const handleButtonClickss = () => {
+  if (screen === '0') {
+    setScreen('7');
+  } else {
+    setScreen(`${screen}7`);
+  }
+};
+
   return (
     <div className='app'>
     <h1>Calculator</h1>
@@ -50,9 +67,11 @@ function App() {
       <tr>
        <td><button type='button'
        className={buttonsClasses}
+       onClick={handleButtonClickss}
        >7</button></td>
        <td><button type='button'
        className={buttonsClasses}
+       onClick={handleButtonClicks}
        >8</button></td>
        <td><button type='button'
        className={buttonsClasses}
